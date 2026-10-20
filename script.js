@@ -377,7 +377,7 @@
   if (ghSection) {
     var ghUser = (ghSection.getAttribute('data-github-user') || '').trim();
     var langColors = {
-      JavaScript: '#f1e05a', HTML: '#e34c26', CSS: '#7c6cff', Python: '#3572a5',
+      JavaScript: '#f1e05a', HTML: '#e34c26', CSS: '#ff3b4a', Python: '#3572a5',
       TypeScript: '#3178c6', Java: '#b07219', 'C++': '#f34b7d', C: '#8b8b99', Shell: '#89e051'
     };
 
