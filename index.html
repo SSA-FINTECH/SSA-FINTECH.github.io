@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--
+  ==========================================================================
+   EDIT ME — YOUR DETAILS  (use Find & Replace across index.html)
+  ==========================================================================
+   YOUR_NAME            : Syed Saad Aamir        (initials: SSA)
+   YOUR_EMAIL           : syed.saad.khi0332@gmail.com
+   YOUR_GITHUB_USERNAME : SSA-FINTECH            (also set in <section id="github" data-github-user="...">)
+   YOUR_GITHUB_URL      : https://github.com/SSA-FINTECH
+   YOUR_LINKEDIN_URL    : https://www.linkedin.com/in/SyedSaadAamir
+   YOUR_FIGMA_URL       : #                      (placeholder — replace with your Figma profile link)
+
+   WHERE TO EDIT CONTENT
+   - Hero roles that rotate      : <span id="typed" data-roles="A|B|C">
+   - Timeline (About)            : <ol class="timeline"> — one <li> per year
+   - Projects                    : <ul id="projectsGrid"> — one <li class="project-cell"> per project
+                                   data-category = web | uiux | javascript | python (space separated)
+                                   Replace the GitHub "#" / Live Demo "#" links with real URLs.
+   - Contact form                : <form id="contactForm" data-endpoint="" data-mailto="...">
+                                   Leave data-endpoint empty to open the visitor's email app (mailto).
+                                   Paste a Formspree URL there to send messages through Formspree.
+  ==========================================================================
+  -->
+
+  <title>Syed Saad Aamir — Frontend Developer &amp; UI/UX Designer</title>
+  <meta name="description" content="Syed Saad Aamir is a Frontend Developer and UI/UX Designer building modern, responsive and user-focused digital experiences with HTML, CSS, JavaScript, Python and Figma.">
+  <meta name="author" content="Syed Saad Aamir">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#080808">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Syed Saad Aamir — Frontend Developer &amp; UI/UX Designer">
+  <meta property="og:description" content="I design and build modern digital experiences that combine clean UI, thoughtful UX and powerful frontend development.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Syed Saad Aamir — Frontend Developer &amp; UI/UX Designer">
+  <meta name="twitter:description" content="Modern, responsive, user-focused digital experiences.">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%237c6cff'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='30' font-weight='700' text-anchor='middle' fill='white'%3ES%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ICON SPRITE (decorative, referenced with <use>) -->
+  <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22,6 12,13 2,6"/></symbol>
+    <symbol id="i-figma" viewBox="0 0 24 24"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+    <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"/><path d="M12 19h8"/></symbol>
+    <symbol id="i-branch" viewBox="0 0 24 24"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></symbol>
+    <symbol id="i-braces" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M10 10l-2 2 2 2M14 10l2 2-2 2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+    <symbol id="i-fork" viewBox="0 0 24 24"><circle cx="12" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><path d="M18 9v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9M12 12v3"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  </svg>
+
+  <!-- ANIMATED BACKGROUND -->
+  <div class="bg-fx" aria-hidden="true">
+    <span class="bg-blob blob-a"></span>
+    <span class="bg-blob blob-b"></span>
+    <span class="bg-blob blob-c"></span>
+    <span class="bg-grid"></span>
+    <div class="particles" id="particles"></div>
+  </div>
+
+  <!-- CUSTOM CURSOR (desktop only, enabled by script.js) -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-inner" aria-label="Primary">
+      <a class="logo" href="#home" aria-label="Syed Saad Aamir — back to top">&lt;<span class="logo-mark">SSA</span> /&gt;</a>
+
+      <ul class="nav-links">
+        <li><a class="nav-link active" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#services">Services</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+
+      <a class="btn btn-primary btn-sm nav-cta magnetic" href="#contact">
+        Let's Talk
+        <svg class="icon icon-move" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="Mobile">
+      <ul class="mobile-links">
+        <li><a class="mobile-link" href="#home"><span class="mm-num">01</span>Home</a></li>
+        <li><a class="mobile-link" href="#about"><span class="mm-num">02</span>About</a></li>
+        <li><a class="mobile-link" href="#skills"><span class="mm-num">03</span>Skills</a></li>
+        <li><a class="mobile-link" href="#projects"><span class="mm-num">04</span>Projects</a></li>
+        <li><a class="mobile-link" href="#services"><span class="mm-num">05</span>Services</a></li>
+        <li><a class="mobile-link" href="#contact"><span class="mm-num">06</span>Contact</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-foot">
+      <a class="btn btn-primary mobile-cta" href="#contact">
+        Let's Talk
+        <svg class="icon icon-move" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+      </a>
+      <div class="socials">
+        <a class="social" href="https://github.com/SSA-FINTECH" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a>
+        <a class="social" href="https://www.linkedin.com/in/SyedSaadAamir" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a>
+        <a class="social" href="mailto:syed.saad.khi0332@gmail.com" aria-label="Email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a>
+        <a class="social" href="#" aria-label="Figma"><svg class="icon" aria-hidden="true"><use href="#i-figma"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+
+        <div class="hero-copy">
+          <p class="badge"><span class="badge-dot" aria-hidden="true"></span>Available for freelance</p>
+
+          <h1 class="hero-title" id="hero-title">
+            <span class="hero-greeting">Hi, I'm <span class="grad-text">Syed Saad Aamir</span>.</span>
+            <span class="sr-only">Frontend Developer, UI/UX Designer and Creative Problem Solver</span>
+            <span class="hero-role" aria-hidden="true">
+              <span class="role-sizer">Frontend Developer</span>
+              <span class="role-sizer">UI/UX Designer</span>
+              <span class="role-sizer">Creative Developer</span>
+              <span class="role-sizer">Creative Problem Solver</span>
+              <span class="role-typed"><span id="typed" data-roles="Frontend Developer|UI/UX Designer|Creative Developer|Creative Problem Solver">Frontend Developer</span><span class="caret"></span></span>
+            </span>
+          </h1>
+
+          <p class="hero-lead">I design and build modern digital experiences that combine clean UI, thoughtful UX and powerful frontend development.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg magnetic" href="#projects">
+              View My Work
+              <svg class="icon icon-move" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </a>
+            <a class="btn btn-ghost btn-lg magnetic" href="#contact">
+              Let's Talk
+              <svg class="icon icon-move" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </a>
+          </div>
+
+          <ul class="socials" aria-label="Social links">
+            <li><a class="social" href="https://github.com/SSA-FINTECH" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a></li>
+            <li><a class="social" href="https://www.linkedin.com/in/SyedSaadAamir" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+            <li><a class="social" href="mailto:syed.saad.khi0332@gmail.com" aria-label="Email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
+            <li><a class="social" href="#" aria-label="Figma"><svg class="icon" aria-hidden="true"><use href="#i-figma"/></svg></a></li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <span class="hv-grid"></span>
+          <span class="hv-orb"></span>
+          <span class="hv-dot hd1"></span><span class="hv-dot hd2"></span><span class="hv-dot hd3"></span>
+          <span class="hv-dot hd4"></span><span class="hv-dot hd5"></span><span class="hv-dot hd6"></span>
+
+          <div class="float-card fc-1" data-depth="18">
+            <span class="fc-icon"><svg class="icon" aria-hidden="true"><use href="#i-figma"/></svg></span>
+            <span><strong>UI Design</strong><small>Designed in Figma</small></span>
+          </div>
+
+          <div class="code-card" data-depth="8">
+            <div class="code-head">
+              <span class="dots"><i></i><i></i><i></i></span>
+              <span class="code-file">developer.js</span>
+            </div>
+<pre class="code"><code><span class="c-k">const</span> <span class="c-v">developer</span> <span class="c-p">=</span> <span class="c-p">{</span>
+    <span class="c-a">name</span><span class="c-p">:</span> <span class="c-s">"Syed Saad Aamir"</span><span class="c-p">,</span>
+    <span class="c-a">role</span><span class="c-p">:</span> <span class="c-s">"Frontend Developer"</span><span class="c-p">,</span>
+    <span class="c-a">skills</span><span class="c-p">:</span> <span class="c-p">[</span><span class="c-s">"HTML"</span><span class="c-p">,</span> <span class="c-s">"CSS"</span><span class="c-p">,</span> <span class="c-s">"JavaScript"</span><span class="c-p">]</span><span class="c-p">,</span>
+    <span class="c-a">design</span><span class="c-p">:</span> <span class="c-s">"Figma"</span>
+<span class="c-p">};</span><span class="code-caret"></span></code></pre>
+          </div>
+
+          <div class="float-card fc-2" data-depth="26">
+            <span class="fc-icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span>
+            <span><strong>Responsive</strong><small>Mobile first</small></span>
+          </div>
+
+          <div class="float-card fc-3" data-depth="14">
+            <span class="fc-icon"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>
+            <span><strong>Clean code</strong><small>Built to maintain</small></span>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-hint" href="#about" aria-label="Scroll to explore">
+        <span>Scroll to explore</span>
+        <span class="scroll-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg></span>
+      </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-left reveal">
+            <p class="eyebrow">01 / About</p>
+            <h2 class="section-title" id="about-title">A little <span class="grad-text">about me</span></h2>
+          </div>
+          <div class="about-right reveal">
+            <p class="lead">I'm Syed Saad Aamir — a frontend developer and UI/UX designer who cares about the small details that make a product feel effortless.</p>
+            <p>My curiosity about how websites work turned into a craft: designing interfaces in Figma, then turning them into fast, accessible and responsive experiences with HTML, CSS and JavaScript. I enjoy the whole path from first idea to polished product, and I'm always learning the next thing.</p>
+          </div>
+        </div>
+
+        <div class="about-cards" data-stagger>
+          <article class="card about-card spotlight reveal">
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></span>
+            <h3>Frontend Development</h3>
+            <p>Semantic, performant interfaces written in clean HTML, CSS and vanilla JavaScript.</p>
+          </article>
+          <article class="card about-card spotlight reveal">
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-pen"/></svg></span>
+            <h3>UI/UX Design</h3>
+            <p>Layouts, flows and prototypes designed around real people and real tasks.</p>
+          </article>
+          <article class="card about-card spotlight reveal">
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg></span>
+            <h3>Problem Solving</h3>
+            <p>Breaking messy problems into simple steps and shipping practical solutions.</p>
+          </article>
+          <article class="card about-card spotlight reveal">
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg></span>
+            <h3>Continuous Learning</h3>
+            <p>Always building, reading and improving — new tools, better habits, sharper craft.</p>
+          </article>
+        </div>
+
+        <div class="journey">
+          <h3 class="journey-title reveal">My journey</h3>
+          <!-- EDIT: one <li> per milestone -->
+          <ol class="timeline" data-stagger>
+            <li class="tl-item reveal">
+              <span class="tl-year">2023</span>
+              <p>Started learning development</p>
+            </li>
+            <li class="tl-item reveal">
+              <span class="tl-year">2024</span>
+              <p>Built personal projects</p>
+            </li>
+            <li class="tl-item reveal">
+              <span class="tl-year">2025</span>
+              <p>Started UI/UX and Figma</p>
+            </li>
+            <li class="tl-item reveal">
+              <span class="tl-year">2026</span>
+              <p>Building professional projects</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section skills" id="skills" aria-labelledby="skills-title">
+      <div class="section-bg" aria-hidden="true"><span class="sb-blob sb-1"></span><span class="sb-blob sb-2"></span><span class="sb-dots"></span></div>
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">02 / Skills</p>
+          <h2 class="section-title" id="skills-title">Tools &amp; <span class="grad-text">craft</span></h2>
+          <p class="section-sub">The technologies and design skills I use to turn ideas into polished products.</p>
+        </header>
+
+        <div class="skill-group">
+          <div class="group-head reveal"><h3>Development</h3><span class="group-line"></span><span class="group-count">05</span></div>
+          <div class="skills-grid" data-stagger>
+            <article class="card skill-card spotlight reveal">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></span>
+              <h4>HTML5</h4>
+              <p>Semantic, accessible markup that gives every page a solid structure.</p>
+            </article>
+            <article class="card skill-card spotlight reveal">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-layout"/></svg></span>
+              <h4>CSS3</h4>
+              <p>Grid, Flexbox, animation and custom properties for polished interfaces.</p>
+            </article>
+            <article class="card skill-card spotlight reveal">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-zap"/></svg></span>
+              <h4>JavaScript</h4>
+              <p>Vanilla JS for interaction, state and API integrations.</p>
+            </article>
+            <article class="card skill-card spotlight reveal">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-terminal"/></svg></span>
+              <h4>Python</h4>
+              <p>Automation, scripting and small applications that save time.</p>
+            </article>
+            <article class="card skill-card spotlight reveal">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span>
+              <h4>Responsive Design</h4>
+              <p>Layouts that adapt cleanly from small phones to wide desktops.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="group-head reveal"><h3>Design</h3><span class="group-line"></span><span class="group-count">05</span></div>
+          <div class="skills-grid" data-stagger>
+            <article class="card skill-card spotlight reveal">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-figma"/></svg></span>
+              <h4>Figma</h4>
+              <p>Components, auto-layout and clean handoff from design to code.</p>
+            </article>
+            <article class="card skill-card spotlight reveal">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-pen"/></svg></span>
+              <h4>UI Design</h4>
+              <p>Visual hierarchy, typography and colour used with purpose.</p>
+            </article>
+            <article class="card skill-card spotlight reveal">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
+              <h4>UX Design</h4>
+              <p>User flows and decisions that remove friction and add clarity.</p>
+            </article>
+            <article class="card skill-card spotlight reveal">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg></span>
+              <h4>Wireframing</h4>
+              <p>Low-fidelity layouts to test ideas before polishing pixels.</p>
+            </article>
+            <article class="card skill-card spotlight reveal">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg></span>
+              <h4>Prototyping</h4>
+              <p>Clickable flows that make interactions easy to review and refine.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="group-head reveal"><h3>Tools</h3><span class="group-line"></span><span class="group-count">04</span></div>
+          <div class="skills-grid" data-stagger>
+            <article class="card skill-card spotlight reveal">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-branch"/></svg></span>
+              <h4>Git</h4>
+              <p>Version control with a clean, readable commit history.</p>
+            </article>
+            <article class="card skill-card spotlight reveal">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></span>
+              <h4>GitHub</h4>
+              <p>Repositories, issues, pull requests and GitHub Pages hosting.</p>
+            </article>
+            <article class="card skill-card spotlight reveal">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-braces"/></svg></span>
+              <h4>VS Code</h4>
+              <p>A tuned editor setup for fast, focused building.</p>
+            </article>
+            <article class="card skill-card spotlight reveal">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-figma"/></svg></span>
+              <h4>Figma</h4>
+              <p>The shared space where design and development meet.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section projects" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="projects-top">
+          <header class="section-head reveal">
+            <p class="eyebrow">03 / Projects</p>
+            <h2 class="section-title" id="projects-title">Selected <span class="grad-text">Work</span></h2>
+            <p class="section-sub">A collection of projects I've designed and built.</p>
+          </header>
+
+          <div class="filters reveal" id="projectFilters" role="group" aria-label="Filter projects">
+            <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-btn" type="button" data-filter="web" aria-pressed="false">Web</button>
+            <button class="filter-btn" type="button" data-filter="uiux" aria-pressed="false">UI/UX</button>
+            <button class="filter-btn" type="button" data-filter="javascript" aria-pressed="false">JavaScript</button>
+            <button class="filter-btn" type="button" data-filter="python" aria-pressed="false">Python</button>
+          </div>
+        </div>
+        <p class="filter-status" id="filterStatus" role="status" aria-live="polite">Showing 6 projects</p>
+
+        <!-- EDIT PROJECTS HERE: one <li class="project-cell"> per project -->
+        <ul class="projects-grid" id="projectsGrid" data-stagger>
+
+          <!-- 01 -->
+          <li class="project-cell reveal" data-category="web javascript">
+            <article class="project-card">
+              <div class="pv pv-1">
+                <span class="pv-num" aria-hidden="true">01</span>
+                <div class="mock" aria-hidden="true">
+                  <div class="m-win">
+                    <div class="m-bar"><i></i><i></i><i></i></div>
+                    <div class="m-body m-split">
+                      <div class="m-col">
+                        <span class="m-line accent tall w70"></span>
+                        <span class="m-line w90"></span>
+                        <span class="m-line w50"></span>
+                        <div class="m-row"><span class="m-btn"></span><span class="m-btn ghost"></span></div>
+                      </div>
+                      <div class="m-center"><span class="m-orb"></span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-body">
+                <div class="project-top">
+                  <span class="project-index">01</span>
+                  <svg class="icon project-arrow" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+                </div>
+                <h3>Personal Portfolio</h3>
+                <p>A modern, responsive portfolio with glass UI, smooth interactions and a focus on performance and accessibility.</p>
+                <ul class="tags" aria-label="Technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                <div class="project-actions">
+                  <a class="btn btn-ghost btn-sm" href="https://github.com/SSA-FINTECH" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+                  <a class="btn btn-primary btn-sm" href="#">Live Demo<svg class="icon icon-diag" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <!-- 02 -->
+          <li class="project-cell reveal" data-category="web uiux javascript">
+            <article class="project-card">
+              <div class="pv pv-2">
+                <span class="pv-num" aria-hidden="true">02</span>
+                <div class="mock" aria-hidden="true">
+                  <div class="m-win">
+                    <div class="m-bar"><i></i><i></i><i></i></div>
+                    <div class="m-body m-tiles">
+                      <div class="m-tile"><span class="m-img g1"></span><span class="m-line w80"></span><span class="m-line accent w40"></span></div>
+                      <div class="m-tile"><span class="m-img g2"></span><span class="m-line w70"></span><span class="m-line accent w40"></span></div>
+                      <div class="m-tile"><span class="m-img g3"></span><span class="m-line w90"></span><span class="m-line accent w40"></span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-body">
+                <div class="project-top">
+                  <span class="project-index">02</span>
+                  <svg class="icon project-arrow" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+                </div>
+                <h3>E-Commerce UI</h3>
+                <p>A clean, conversion-focused shopping experience with a product grid, filters and a streamlined cart flow.</p>
+                <ul class="tags" aria-label="Technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Figma</li></ul>
+                <div class="project-actions">
+                  <a class="btn btn-ghost btn-sm" href="https://github.com/SSA-FINTECH" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+                  <a class="btn btn-primary btn-sm" href="#">Live Demo<svg class="icon icon-diag" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <!-- 03 -->
+          <li class="project-cell reveal" data-category="python javascript">
+            <article class="project-card">
+              <div class="pv pv-3">
+                <span class="pv-num" aria-hidden="true">03</span>
+                <div class="mock" aria-hidden="true">
+                  <div class="m-win">
+                    <div class="m-bar"><i></i><i></i><i></i></div>
+                    <div class="m-body m-chat">
+                      <div class="m-bubble"><span class="m-line w90"></span><span class="m-line w60"></span></div>
+                      <div class="m-bubble me"><span class="m-line w80"></span></div>
+                      <div class="m-bubble"><span class="m-line w70"></span><span class="m-line w40"></span></div>
+                      <div class="m-input"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-body">
+                <div class="project-top">
+                  <span class="project-index">03</span>
+                  <svg class="icon project-arrow" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+                </div>
+                <h3>AI Chat Application</h3>
+                <p>An interactive chat interface for AI conversations, with a Python backend and a snappy JavaScript front end.</p>
+                <ul class="tags" aria-label="Technologies"><li>Python</li><li>JavaScript</li></ul>
+                <div class="project-actions">
+                  <a class="btn btn-ghost btn-sm" href="https://github.com/SSA-FINTECH" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+                  <a class="btn btn-primary btn-sm" href="#">Live Demo<svg class="icon icon-diag" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <!-- 04 -->
+          <li class="project-cell reveal" data-category="uiux web javascript">
+            <article class="project-card">
+              <div class="pv pv-4">
+                <span class="pv-num" aria-hidden="true">04</span>
+                <div class="mock" aria-hidden="true">
+                  <div class="m-win">
+                    <div class="m-bar"><i></i><i></i><i></i></div>
+                    <div class="m-body">
+                      <div class="m-stats"><span class="m-stat"></span><span class="m-stat"></span><span class="m-stat"></span></div>
+                      <div class="m-bars"><span class="h40"></span><span class="h60"></span><span class="h50"></span><span class="h80"></span><span class="h70"></span><span class="h90"></span><span class="h60"></span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-body">
+                <div class="project-top">
+                  <span class="project-index">04</span>
+                  <svg class="icon project-arrow" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+                </div>
+                <h3>Dashboard UI</h3>
+                <p>A modern analytics dashboard with clear data visualisation, designed in Figma and built with pure HTML, CSS and JS.</p>
+                <ul class="tags" aria-label="Technologies"><li>Figma</li><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                <div class="project-actions">
+                  <a class="btn btn-ghost btn-sm" href="https://github.com/SSA-FINTECH" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+                  <a class="btn btn-primary btn-sm" href="#">Live Demo<svg class="icon icon-diag" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <!-- 05 -->
+          <li class="project-cell reveal" data-category="web javascript">
+            <article class="project-card">
+              <div class="pv pv-5">
+                <span class="pv-num" aria-hidden="true">05</span>
+                <div class="mock" aria-hidden="true">
+                  <div class="m-win">
+                    <div class="m-bar"><i></i><i></i><i></i></div>
+                    <div class="m-body">
+                      <div class="m-task"><span class="m-check done"></span><span class="m-line w70"></span></div>
+                      <div class="m-task"><span class="m-check done"></span><span class="m-line w50"></span></div>
+                      <div class="m-task"><span class="m-check"></span><span class="m-line w80"></span></div>
+                      <div class="m-task"><span class="m-check"></span><span class="m-line w60"></span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-body">
+                <div class="project-top">
+                  <span class="project-index">05</span>
+                  <svg class="icon project-arrow" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+                </div>
+                <h3>Task Management App</h3>
+                <p>A productivity app to plan, track and complete tasks, wrapped in a calm, distraction-free interface.</p>
+                <ul class="tags" aria-label="Technologies"><li>JavaScript</li><li>CSS</li></ul>
+                <div class="project-actions">
+                  <a class="btn btn-ghost btn-sm" href="https://github.com/SSA-FINTECH" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+                  <a class="btn btn-primary btn-sm" href="#">Live Demo<svg class="icon icon-diag" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <!-- 06 -->
+          <li class="project-cell reveal" data-category="python">
+            <article class="project-card">
+              <div class="pv pv-6">
+                <span class="pv-num" aria-hidden="true">06</span>
+                <div class="mock" aria-hidden="true">
+                  <div class="m-win">
+                    <div class="m-bar"><i></i><i></i><i></i></div>
+                    <div class="m-body m-term">
+                      <span><b class="t-p">$</b> python automate.py</span>
+                      <span class="t-m">scanning folder...</span>
+                      <span><b class="t-g">✓</b> 24 files organised</span>
+                      <span><b class="t-g">✓</b> report saved</span>
+                      <span><b class="t-p">$</b> <i class="t-caret"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-body">
+                <div class="project-top">
+                  <span class="project-index">06</span>
+                  <svg class="icon project-arrow" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+                </div>
+                <h3>Python Automation</h3>
+                <p>A desktop automation project that removes repetitive tasks with simple, reliable Python scripts.</p>
+                <ul class="tags" aria-label="Technologies"><li>Python</li></ul>
+                <div class="project-actions">
+                  <a class="btn btn-ghost btn-sm" href="https://github.com/SSA-FINTECH" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+                  <a class="btn btn-primary btn-sm" href="#">Live Demo<svg class="icon icon-diag" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- GITHUB -->
+    <!-- EDIT: change data-github-user to your GitHub username (it is read by script.js) -->
+    <section class="section github" id="github" data-github-user="SSA-FINTECH" aria-labelledby="github-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">04 / Open source</p>
+          <h2 class="section-title" id="github-title">Built in <span class="grad-text">Public</span></h2>
+          <p class="section-sub">I share what I build and learn on GitHub. Follow along, explore the code and say hello.</p>
+        </header>
+
+        <div class="github-grid">
+          <article class="card gh-profile spotlight reveal">
+            <div class="gh-id">
+              <span class="gh-avatar">
+                <span class="gh-avatar-fallback" id="ghAvatarFallback"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></span>
+                <img id="ghAvatar" alt="GitHub avatar of SSA-FINTECH" width="72" height="72" hidden>
+              </span>
+              <div>
+                <h3 class="gh-name">@SSA-FINTECH</h3>
+                <p class="gh-bio" id="ghBio">Frontend developer &amp; UI/UX designer, building in public.</p>
+              </div>
+            </div>
+
+            <dl class="gh-stats">
+              <div class="gh-stat"><dt>Repositories</dt><dd data-stat="repos">—</dd></div>
+              <div class="gh-stat"><dt>Followers</dt><dd data-stat="followers">—</dd></div>
+              <div class="gh-stat"><dt>Following</dt><dd data-stat="following">—</dd></div>
+            </dl>
+
+            <div class="gh-actions">
+              <a class="btn btn-primary btn-sm" href="https://github.com/SSA-FINTECH" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>GitHub Profile</a>
+              <a class="btn btn-ghost btn-sm" href="https://github.com/SSA-FINTECH?tab=repositories" target="_blank" rel="noopener noreferrer">Repositories<svg class="icon icon-diag" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+            </div>
+          </article>
+
+          <article class="card gh-activity reveal">
+            <div class="gh-activity-head">
+              <h3>Activity</h3>
+              <span class="gh-legend" aria-hidden="true">Less <i class="l0"></i><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="l4"></i> More</span>
+            </div>
+            <div class="contrib-grid" id="contribGrid" aria-hidden="true"></div>
+            <p class="gh-note">Decorative activity visual — see my GitHub profile for the real contribution graph.</p>
+          </article>
+        </div>
+
+        <!-- Static fallback cards; replaced with live repositories by script.js when the GitHub API responds -->
+        <div class="repo-grid" id="repoGrid">
+          <a class="card repo-card spotlight" href="https://github.com/SSA-FINTECH" target="_blank" rel="noopener noreferrer">
+            <div class="repo-head"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><strong>Portfolio</strong></div>
+            <p>Modern responsive portfolio website built with HTML, CSS and JavaScript.</p>
+            <div class="repo-meta"><span><i class="lang-dot lang-js"></i>JavaScript</span></div>
+          </a>
+          <a class="card repo-card spotlight" href="https://github.com/SSA-FINTECH" target="_blank" rel="noopener noreferrer">
+            <div class="repo-head"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><strong>Dashboard-UI</strong></div>
+            <p>Analytics dashboard interface designed in Figma and built for the web.</p>
+            <div class="repo-meta"><span><i class="lang-dot lang-css"></i>CSS</span></div>
+          </a>
+          <a class="card repo-card spotlight" href="https://github.com/SSA-FINTECH" target="_blank" rel="noopener noreferrer">
+            <div class="repo-head"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><strong>Python-Automation</strong></div>
+            <p>Desktop automation scripts that take care of repetitive tasks.</p>
+            <div class="repo-meta"><span><i class="lang-dot lang-py"></i>Python</span></div>
+          </a>
+        </div>
+        <p class="github-status" id="githubStatus" role="status" aria-live="polite">Loading live data from GitHub…</p>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">05 / Services</p>
+          <h2 class="section-title" id="services-title">How I can <span class="grad-text">help</span></h2>
+          <p class="section-sub">From first sketch to shipped product — design and development under one roof.</p>
+        </header>
+
+        <div class="services-grid" data-stagger>
+          <a class="card service-card spotlight reveal" href="#contact">
+            <span class="service-num" aria-hidden="true">01</span>
+            <h3>Web Development</h3>
+            <p>Modern, responsive websites built with clean frontend technologies.</p>
+            <span class="service-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></span>
+          </a>
+          <a class="card service-card spotlight reveal" href="#contact">
+            <span class="service-num" aria-hidden="true">02</span>
+            <h3>UI/UX Design</h3>
+            <p>User-focused interfaces and prototypes designed in Figma.</p>
+            <span class="service-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></span>
+          </a>
+          <a class="card service-card spotlight reveal" href="#contact">
+            <span class="service-num" aria-hidden="true">03</span>
+            <h3>Frontend Development</h3>
+            <p>Interactive and responsive web experiences that feel great to use.</p>
+            <span class="service-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></span>
+          </a>
+          <a class="card service-card spotlight reveal" href="#contact">
+            <span class="service-num" aria-hidden="true">04</span>
+            <h3>Python Development</h3>
+            <p>Automation, scripts and Python-based applications.</p>
+            <span class="service-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY WORK WITH ME -->
+    <section class="section why" id="why" aria-labelledby="why-title">
+      <div class="container why-grid">
+        <div class="why-intro reveal">
+          <p class="eyebrow">06 / Why me</p>
+          <h2 class="section-title" id="why-title">Why work <span class="grad-text">with me?</span></h2>
+          <p class="section-sub">I treat every project like my own product: thoughtful, tidy and built to last.</p>
+          <a class="btn btn-primary magnetic" href="#contact">Start a project<svg class="icon icon-move" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        </div>
+
+        <div class="why-cards" data-stagger>
+          <article class="card why-card spotlight reveal">
+            <span class="why-num" aria-hidden="true">01</span>
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+            <h3>Clean &amp; maintainable code</h3>
+            <p>Readable, well-organised code that's easy to extend long after launch.</p>
+          </article>
+          <article class="card why-card spotlight reveal">
+            <span class="why-num" aria-hidden="true">02</span>
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span>
+            <h3>Responsive design</h3>
+            <p>Every layout is tested across screen sizes so it looks right everywhere.</p>
+          </article>
+          <article class="card why-card spotlight reveal">
+            <span class="why-num" aria-hidden="true">03</span>
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
+            <h3>User-focused interfaces</h3>
+            <p>Decisions guided by how real people read, scan, tap and click.</p>
+          </article>
+          <article class="card why-card spotlight reveal">
+            <span class="why-num" aria-hidden="true">04</span>
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg></span>
+            <h3>Attention to detail</h3>
+            <p>Spacing, typography and motion refined until everything feels intentional.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="cta-panel reveal">
+          <span class="cta-glow" aria-hidden="true"></span>
+          <p class="eyebrow">07 / Contact</p>
+          <h2 class="cta-title" id="contact-title">Let's build something <span class="grad-text">great together.</span></h2>
+          <p class="cta-text">Have an idea, project or opportunity? Let's talk.</p>
+          <div class="cta-actions">
+            <a class="btn btn-primary btn-lg magnetic" id="ctaMessage" href="#contactForm">Send Me a Message<svg class="icon icon-move" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+            <a class="btn btn-ghost btn-lg magnetic" href="https://github.com/SSA-FINTECH" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>View GitHub</a>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <h3>Get in touch</h3>
+            <ul class="contact-list">
+              <li><a class="contact-link" href="mailto:syed.saad.khi0332@gmail.com"><span class="icon-tile sm"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span><span><small>Email</small>syed.saad.khi0332@gmail.com</span></a></li>
+              <li><a class="contact-link" href="https://github.com/SSA-FINTECH" target="_blank" rel="noopener noreferrer"><span class="icon-tile sm"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></span><span><small>GitHub</small>SSA-FINTECH</span></a></li>
+              <li><a class="contact-link" href="https://www.linkedin.com/in/SyedSaadAamir" target="_blank" rel="noopener noreferrer"><span class="icon-tile sm"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></span><span><small>LinkedIn</small>SyedSaadAamir</span></a></li>
+              <li><a class="contact-link" href="#"><span class="icon-tile sm"><svg class="icon" aria-hidden="true"><use href="#i-figma"/></svg></span><span><small>Figma</small>Add your Figma link</span></a></li>
+            </ul>
+          </div>
+
+          <!-- Leave data-endpoint empty to use mailto. For Formspree, set data-endpoint="https://formspree.io/f/YOUR_ID" -->
+          <form class="card contact-form reveal" id="contactForm" novalidate data-endpoint="" data-mailto="syed.saad.khi0332@gmail.com" aria-label="Contact form">
+            <div class="form-row">
+              <div class="field">
+                <label for="cf-name">Name</label>
+                <input id="cf-name" name="name" type="text" autocomplete="name" placeholder="Your name" aria-describedby="cf-name-error" required>
+                <span class="field-error" id="cf-name-error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="cf-email">Email</label>
+                <input id="cf-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" aria-describedby="cf-email-error" required>
+                <span class="field-error" id="cf-email-error" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="field">
+              <label for="cf-subject">Subject</label>
+              <input id="cf-subject" name="subject" type="text" placeholder="What's this about?" aria-describedby="cf-subject-error" required>
+              <span class="field-error" id="cf-subject-error" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="5" placeholder="Tell me about your project…" aria-describedby="cf-message-error" required></textarea>
+              <span class="field-error" id="cf-message-error" aria-live="polite"></span>
+            </div>
+
+            <button class="btn btn-primary btn-lg form-submit" type="submit" id="formSubmit">Send Message<svg class="icon icon-move" aria-hidden="true"><use href="#i-send"/></svg></button>
+
+            <div class="form-status" id="formStatus" role="status" aria-live="polite">
+              <svg class="icon" aria-hidden="true"><use id="formStatusIcon" href="#i-check"/></svg>
+              <span id="formStatusText"></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="#home" aria-label="Syed Saad Aamir — back to top">&lt;<span class="logo-mark">SSA</span> /&gt;</a>
+          <p class="footer-name">Syed Saad Aamir</p>
+          <p class="footer-tag">Frontend Developer &amp; UI/UX Designer</p>
+          <ul class="socials" aria-label="Social links">
+            <li><a class="social" href="https://github.com/SSA-FINTECH" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a></li>
+            <li><a class="social" href="https://www.linkedin.com/in/SyedSaadAamir" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+            <li><a class="social" href="#" aria-label="Figma"><svg class="icon" aria-hidden="true"><use href="#i-figma"/></svg></a></li>
+            <li><a class="social" href="mailto:syed.saad.khi0332@gmail.com" aria-label="Email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
+          </ul>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <h2 class="footer-heading">Quick links</h2>
+          <ul>
+            <li><a class="link-u" href="#home">Home</a></li>
+            <li><a class="link-u" href="#about">About</a></li>
+            <li><a class="link-u" href="#skills">Skills</a></li>
+            <li><a class="link-u" href="#projects">Projects</a></li>
+            <li><a class="link-u" href="#services">Services</a></li>
+            <li><a class="link-u" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="copyright">© 2026 Syed Saad Aamir. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backToTop" type="button" aria-label="Back to top"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg></button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
